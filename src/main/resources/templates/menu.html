@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ML</title>
+</head>
+<body>
+<h1>Machine learning</h1>
+<hr/>
+<div th:switch="${isTrainingStarted}">
+    <p th:case="${true}">
+        Поиск решения запущен
+    </p>
+    <p th:case="*">
+        <a th:href="@{/machine_learning/start}">Запустить поиск решения</a>
+    </p>
+</div>
+<br/>
+<a th:href="@{/machine_learning/information_about_the_best_solution}">Посмотреть информацию о лучшем решении</a>
+</body>
+</html>

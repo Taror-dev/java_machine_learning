@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ML</title>
+</head>
+<body>
+<a th:href="@{/machine_learning}">вернуться</a>
+<hr/>
+<p th:text="'Решение: ' + ${result.getSetOfChromosomes()}">VALUE</p>
+<p th:text="'Ошибка: ' + ${#numbers.formatDecimal(result.getError(), 1, 20)}">VALUE</p>
+<p th:text="'Веса: ' + ${result.getWeights()}">VALUE</p>
+
+Проверка:
+
+<div th:switch="${result.referenceValues.size()}">
+    <p th:case="${0}">
+        Нет решения
+    </p>
+    <p th:case="*">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+
+            let element_0_0 = [[${result.referenceValues.get(0)}]];
+            let element_0_1 = [[${result.result.get(0)}]];
+            let element_1_0 = [[${result.referenceValues.get(1)}]];
+            let element_1_1 = [[${result.result.get(1)}]];
+            let element_2_0 = [[${result.referenceValues.get(2)}]];
+            let element_2_1 = [[${result.result.get(2)}]];
+            let element_3_0 = [[${result.referenceValues.get(3)}]];
+            let element_3_1 = [[${result.result.get(3)}]];
+            let element_4_0 = [[${result.referenceValues.get(4)}]];
+            let element_4_1 = [[${result.result.get(4)}]];
+            let element_5_0 = [[${result.referenceValues.get(5)}]];
+            let element_5_1 = [[${result.result.get(5)}]];
+            let element_6_0 = [[${result.referenceValues.get(6)}]];
+            let element_6_1 = [[${result.result.get(6)}]];
+            let element_7_0 = [[${result.referenceValues.get(7)}]];
+            let element_7_1 = [[${result.result.get(7)}]];
+            let element_8_0 = [[${result.referenceValues.get(8)}]];
+            let element_8_1 = [[${result.result.get(8)}]];
+            let element_9_0 = [[${result.referenceValues.get(9)}]];
+            let element_9_1 = [[${result.result.get(9)}]];
+            let element_10_0 = [[${result.referenceValues.get(10)}]];
+            let element_10_1 = [[${result.result.get(10)}]];
+            let element_11_0 = [[${result.referenceValues.get(11)}]];
+            let element_11_1 = [[${result.result.get(11)}]];
+            let element_12_0 = [[${result.referenceValues.get(12)}]];
+            let element_12_1 = [[${result.result.get(12)}]];
+            let element_13_0 = [[${result.referenceValues.get(13)}]];
+            let element_13_1 = [[${result.result.get(13)}]];
+            let element_14_0 = [[${result.referenceValues.get(14)}]];
+            let element_14_1 = [[${result.result.get(14)}]];
+            let element_15_0 = [[${result.referenceValues.get(15)}]];
+            let element_15_1 = [[${result.result.get(15)}]];
+            let element_16_0 = [[${result.referenceValues.get(16)}]];
+            let element_16_1 = [[${result.result.get(16)}]];
+            let element_17_0 = [[${result.referenceValues.get(17)}]];
+            let element_17_1 = [[${result.result.get(17)}]];
+            let element_18_0 = [[${result.referenceValues.get(18)}]];
+            let element_18_1 = [[${result.result.get(18)}]];
+            let element_19_0 = [[${result.referenceValues.get(19)}]];
+            let element_19_1 = [[${result.result.get(19)}]];
+            let element_20_0 = [[${result.referenceValues.get(20)}]];
+            let element_20_1 = [[${result.result.get(20)}]];
+            let element_21_0 = [[${result.referenceValues.get(21)}]];
+            let element_21_1 = [[${result.result.get(21)}]];
+            let element_22_0 = [[${result.referenceValues.get(22)}]];
+            let element_22_1 = [[${result.result.get(22)}]];
+            let element_23_0 = [[${result.referenceValues.get(23)}]];
+            let element_23_1 = [[${result.result.get(23)}]];
+            let element_24_0 = [[${result.referenceValues.get(24)}]];
+            let element_24_1 = [[${result.result.get(24)}]];
+            let element_25_0 = [[${result.referenceValues.get(25)}]];
+            let element_25_1 = [[${result.result.get(25)}]];
+            let element_26_0 = [[${result.referenceValues.get(26)}]];
+            let element_26_1 = [[${result.result.get(26)}]];
+            let element_27_0 = [[${result.referenceValues.get(27)}]];
+            let element_27_1 = [[${result.result.get(27)}]];
+            let element_28_0 = [[${result.referenceValues.get(28)}]];
+            let element_28_1 = [[${result.result.get(28)}]];
+            let element_29_0 = [[${result.referenceValues.get(29)}]];
+            let element_29_1 = [[${result.result.get(29)}]];
+            let element_30_0 = [[${result.referenceValues.get(30)}]];
+            let element_30_1 = [[${result.result.get(30)}]];
+            let element_31_0 = [[${result.referenceValues.get(31)}]];
+            let element_31_1 = [[${result.result.get(31)}]];
+            let element_32_0 = [[${result.referenceValues.get(32)}]];
+            let element_32_1 = [[${result.result.get(32)}]];
+            let element_33_0 = [[${result.referenceValues.get(33)}]];
+            let element_33_1 = [[${result.result.get(33)}]];
+            let element_34_0 = [[${result.referenceValues.get(34)}]];
+            let element_34_1 = [[${result.result.get(34)}]];
+            let element_35_0 = [[${result.referenceValues.get(35)}]];
+            let element_35_1 = [[${result.result.get(35)}]];
+            let element_36_0 = [[${result.referenceValues.get(36)}]];
+            let element_36_1 = [[${result.result.get(36)}]];
+            let element_37_0 = [[${result.referenceValues.get(37)}]];
+            let element_37_1 = [[${result.result.get(37)}]];
+            let element_38_0 = [[${result.referenceValues.get(38)}]];
+            let element_38_1 = [[${result.result.get(38)}]];
+            let element_39_0 = [[${result.referenceValues.get(39)}]];
+            let element_39_1 = [[${result.result.get(39)}]];
+
+            google.charts.load('current', {'packages': ['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['x', 'Выходные значения функции', 'Результат обучения'],
+                    ['0', element_0_0, element_0_1],
+                    ['0.25', element_1_0, element_1_1],
+                    ['0.5', element_2_0, element_2_1],
+                    ['0.75', element_3_0, element_3_1],
+                    ['1', element_4_0, element_4_1],
+                    ['1.25', element_5_0, element_5_1],
+                    ['1.5', element_6_0, element_6_1],
+                    ['1.75', element_7_0, element_7_1],
+                    ['2', element_8_0, element_8_1],
+                    ['2.25', element_9_0, element_9_1],
+                    ['2.5', element_10_0, element_10_1],
+                    ['2.75', element_11_0, element_11_1],
+                    ['3', element_12_0, element_12_1],
+                    ['3.25', element_13_0, element_13_1],
+                    ['3.5', element_14_0, element_14_1],
+                    ['3.75', element_15_0, element_15_1],
+                    ['4', element_16_0, element_16_1],
+                    ['4.25', element_17_0, element_17_1],
+                    ['5.5', element_18_0, element_18_1],
+                    ['5.75', element_19_0, element_19_1],
+                    ['6', element_20_0, element_20_1],
+                    ['7.25', element_21_0, element_21_1],
+                    ['7.5', element_22_0, element_22_1],
+                    ['7.75', element_23_0, element_23_1],
+                    ['8', element_24_0, element_24_1],
+                    ['8.25', element_25_0, element_25_1],
+                    ['8.5', element_26_0, element_26_1],
+                    ['8.75', element_27_0, element_27_1],
+                    ['9', element_28_0, element_28_1],
+                    ['9.25', element_29_0, element_29_1],
+                    ['9.5', element_30_0, element_30_1],
+                    ['9.75', element_31_0, element_31_1],
+                    ['10', element_32_0, element_32_1],
+                    ['10.25', element_33_0, element_33_1],
+                    ['10.5', element_34_0, element_34_1],
+                    ['10.75', element_35_0, element_35_1],
+                    ['11', element_36_0, element_36_1],
+                    ['11.25', element_37_0, element_37_1],
+                    ['11.5', element_38_0, element_38_1],
+                    ['11.75', element_39_0, element_39_1]
+                ]);
+
+                var options = {
+                    title: 'XSinX',
+                    curveType: 'function',
+                    legend: {position: 'bottom'}
+                };
+
+                var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+                chart.draw(data, options);
+            }
+        </script>
+    <div id="curve_chart" style="width: 2000px; height: 800px"></div>
+    <table width="100%" cellspacing="0" cellpadding="5">
+        <tr>
+            <td width="200" valign="top">
+                Выходные значения
+                <br>
+                <br>
+                <div th:each="referenceValues : ${result.referenceValues}">
+                    <a th:text="${referenceValues}">VALUE</a>
+                </div>
+            </td>
+            <td valign="top">
+                Результат обучения
+                <br>
+                <br>
+                <div th:each="result : ${result.result}">
+                    <a th:text="${result}">VALUE</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+    </p>
+</div>
+<hr/>
+<a th:href="@{/machine_learning}">вернуться</a>
+</body>
+</html>
