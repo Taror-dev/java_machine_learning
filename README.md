@@ -1,16 +1,28 @@
-# java_machine_learning
-Предисловие:
-Данный проект используется для изучения языка программирования java и алгоритмов машинного обучения.
+# java machine learning
 
-О проекте:
-Реализован процесс обучения методом обратного распространения ошибки для нахождения результатов функции XSinX.
-В данном проекте не используются библиотеки для машинного обучения.
-Реализация обучения нейронной сети, методом обратного распространения ошибки (метод градиентного спуска) и генетического алгоритма написаны самостоятельно.
-Нейронная сеть нужна для нахождения конечных результатов.
-Генетический алгоритм используется для нахождения коэффициентов нейронной сети.
-Набор решения и лучшее решение сохраняются в БД (использую postgresql).
-В случае прекращения работы по непредвиденным причинам программа начнет работу с того места где была прервана.
-Так же для удобства просмотра лучшего решения реализована веб часть.
+This project was created to learn Java programming language and machine learning algorithms.
 
-Реализована многопоточность.
-В среднем, при 10 потоках, решение находиться за одну итерацию примерно за 3 часа.
+Studied algorithms:
+
+* Backpropagation Algorithm
+* Genetic Algorithm
+
+Libraries used:
+
+* Java Springboot
+* Thymeleaf
+* Google Charts
+
+The project task is to find the function x * sin(x * 10), knowing the input and output values.
+
+
+Based on the information studied about the Backpropagation algorithm, a library was written (libraries/neural_network).
+
+
+A genetic algorithm is used to find the working configuration and correct coefficients (alpha, betta, lambda, delta) of the neural network.
+
+
+To start training, click the Start button at http://localhost:8080/java_machine_learning.
+
+
+The data for the best solution at the moment is displayed as a graph using Google Charts.

@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+app:
+  number-of-processors: 4
+
+spring:
+  application:
+    name: java_machine_learning

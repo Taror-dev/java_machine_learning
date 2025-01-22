@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <title>ML</title>
 </head>
-<body>
-<h1>Machine learning</h1>
-<hr/>
-<div th:switch="${isTrainingStarted}">
-    <p th:case="${true}">
-        Поиск решения запущен
-    </p>
-    <p th:case="*">
-        <a th:href="@{/machine_learning/start}">Запустить поиск решения</a>
-    </p>
-</div>
-<br/>
-<a th:href="@{/machine_learning/information_about_the_best_solution}">Посмотреть информацию о лучшем решении</a>
-</body>
+    <body>
+        <h1>java_machine_learning</h1>
+        <hr/>
+        <div th:switch="${isTrainingStarted}">
+            <form th:case="${true}" th:method="GET" th:action="@{/java_machine_learning/stop}">
+                <a>Looking for solution</a>
+                <br/>
+                <input type="submit" value="Stop"/>
+            </form>
+            <form th:case="*" th:method="GET" th:action="@{/java_machine_learning/start}">
+                <a>Start to look for solution</a>
+                <br/>
+                <input type="submit" value="Start"/>
+            </form>
+            <br/>
+            <a th:href="@{/java_machine_learning/information_about_the_best_solution}">Information about the best solution</a>
+            <br/>
+        </div>
+    </body>
 </html>
